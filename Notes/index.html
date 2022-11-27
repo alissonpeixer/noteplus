@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AzNote+</title>
+        <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/913619847240364033/915460442665660426/Untitled-2-Recovrered.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style_old.css">
+        
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <script src="./js/day.js"></script>
+    </head>
+    <body>
+
+        <div id="container">
+
+            <div id="sidebar">
+                <header>
+                    <div class="left">
+                        <img src="https://cdn.discordapp.com/attachments/913619847240364033/915460442665660426/Untitled-2-Recovrered.png" alt="">
+                    </div>
+                    <span class="closed__sidebar" onclick="closeNavbarNote()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                    </span>
+                </header>
+                <div id="input_area">
+                    <div class="user__info">
+                        <div class="user__data">
+                         <span>Olá,</span> <span id="name_2">Null</span>
+                        </div>
+                     </div>
+                    <div style="padding: 4px 0;">
+                        <span>Vamos criar uma nova anotação?</span>
+                    </div>
+
+
+                    <div class="notetext_sec">
+                        <textarea class="tarefas" name="" id="" placeholder="Digite uma nota..." ></textarea> 
+                    </div>
+                  
+                    <span id="length_text"><span id="length_text" class="length___">0</span>/ 140</span>
+                  
+                    <div class="btn_sec">
+                        <input id="btn_add" type="button" value="Adicionar" id="add">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="user__info">
+
+                <header>
+                    <div class="left">
+                        <img src="https://cdn.discordapp.com/attachments/913619847240364033/915460442665660426/Untitled-2-Recovrered.png" alt="">
+                    </div>
+                    <span class="close__profile" onclick="closeProfile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                    </span>
+                </header>
+
+                <div id="input_area">
+
+                        <div class="user__info">
+                            <div class="user__pic">
+                                    <img src="../assents/img/user-picture.png"  >
+                            </div>
+                            <div class="user__data">
+                                <span>Olá,</span> <span id="name_3">Null</span> <span id="surname_1">Null</span>
+                            </div>
+                            <div  class="logaut">
+                                <input type="button" value="Deslogar" onclick="logout()">
+                            </div>
+                           
+                        </div>
+
+                        <form  class="edit__profile">
+                            <h1 class="mensagem__">Em breve..</h1>
+                            <ul>
+                                <li>Alternar entre tema Light ou Dark.</li>
+                                <li>Editar a ordem da lista crecente ou decrecente.</li>
+                                <li>Editar as informação de usuário.</li>
+                                <li>Titulo e categoria nas anotações.</li>
+                                <li>Tradução para ENG.</li>
+                            </ul>
+                            <br><br><br>
+                            <span class="mensagem__">Feito por <a href="https://github.com/alissonpeixer">Alisson Peixer</a></span>
+                        </form>
+           
+                </div>    
+            </div>
+            <main id="page">
+                <main id="">
+                    <div class="msg__welcome">
+                        <span>
+                            <span id="day_time"></span>
+                            <span id="name_1">Null</span>
+                        </span>
+                        <span class="nav__svg">
+                            <span class="nav__icon" onclick="openNavbarNote()">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                            </span>
+                            <span class="profile__" onclick="openProfile()">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="note_container">
+                        <!-- <div class="card_note">
+                            <span>Titulo</span>
+                            <div id="note__">
+                                Lorem, ipsum dolor sit amet consectetur 
+                                adipisicing elit. Exercitationem excepturi, 
+                                nihil officia similique facere quidem quae labore. 
+                                Quod architecto facere reprehenderit sed suscipit c
+                                ulpa nesciunt at quasi rem libero. Ut?
+                            </div>
+                            <footer>
+                                <div class="tarefa__footer">
+                                    <span class="tarefa__data">📝 Criado dia 01/08/2022  as  17:15</span>
+                                    <span class="829alisson tarefa__remove">
+                                    <span style="width: 20px;">
+                                        
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    </span>
+                                    </span>
+                                </div>
+                            </footer>
+                        </div> -->
+
+                    </div>
+                </main>
+            </main>
+        </div>
+        <footer>
+            <span class="copyright">Criado com ❤️  by  <a href="https://github.com/alissonpeixer">Alisson Peixer</a></span>
+        </footer>
+
+        <script src="./js/profile.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/api.js"></script>
+        <script src="./js/logout.js"></script>
+
+        <script src="./js/navbar.js"></script>
+
+
+    </body>
+</html>

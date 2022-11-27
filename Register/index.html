@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/913619847240364033/915460442665660426/Untitled-2-Recovrered.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <title>AzNote+ | Registra-se</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="login.css">
+
+
+    </head>
+    <body id="container">
+       <div class="left">
+
+       </div>
+       <div class="right">
+            <header id="header__"></header>
+            <main id="login__">
+                <span class="text-lg">AzNote+</span>
+                <span class="text-sm">Registra-se</span>
+                <form class="form__login flex" action="javascript:singUp()" method="post" >
+
+                    <div class="flex-colum label" >
+                        <label class="text-sm" for="name">Nome</label>
+                        <input type="text" class="input" id="name" name="name" placeholder="Nome" required>
+                    </div>
+
+                    <div class="flex-colum label" >
+                        <label class="text-sm" for="surname">Sobrenome</label>
+                        <input type="text" class="input" id="surname" name="surname" placeholder="Sobrenome" required>
+                    </div>
+
+                    <div class="flex-colum label" >
+                        <label class="text-sm" for="username">Username</label>
+                        <input type="text" class="input" id="username" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="flex-colum label" >
+                        <label class="text-sm" for="email">E-mail</label>
+                        <input type="email" class="input" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="flex-colum label" >
+                        <label for="password" class="text-sm">Senha</label>
+                        <input type="password" class="input" id="password" name="password" placeholder="Senha" required>
+                    </div>
+                    <div class="btn__container flex-colum" >
+                        <button class="btn-1">Register</button>
+                    </div>
+                    <span class="register__msg">Já tem conta? <a href="https://alissonpeixer.github.io/anotacao-ui/Login">Login</a></span>
+                </form>
+            </main>
+       </div>
+
+       <script src="./js/register.js"></script>
+    </body>
+</html>
